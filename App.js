@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, Image, View, Alert } from 'react-native';
+import { StyleSheet, Text, Image, View, Alert, TouchableOpacity, ScrollView } from 'react-native';
 import { Button } from 'react-native-elements';
 import { Ionicons } from '@expo/vector-icons';
 
@@ -13,36 +13,42 @@ export default class App extends React.Component {
     return (
       <View style={styles.container}>
         <View style={styles.header}>
-          <Ionicons name="md-close" size={32} color="#BDBDBD" />
-          <Ionicons name="md-cog" size={32} color="#BDBDBD" />
+          <Ionicons name="md-close" size={32} color="white" />
+          <Ionicons name="md-cog" size={32} color="white" />
         </View>
         <View style={styles.photoContainer}>
           <Image source={myImage} style={styles.img} />
           <Text style={styles.textStyle}>Marco Rodriguez</Text>
         </View>
         <View style={styles.body}>
-          <Button
-            icon={
+          <TouchableOpacity
+            style={styles.button}
+            onPress={() => alert('Coming Soon')}
+          >
+            <Text>
               <Ionicons
                 name="md-text"
-                size={15}
+                size={20}
                 color="white"
               />
-            }
-            onPress= {() => alert('Coming Soon')}
-            title="Update Status"
-          />
-          <Button
-            icon={
+            </Text>
+            <Text style={styles.buttonText}>
+              Update Status </Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={styles.button}
+            onPress={() => alert('Coming Soon')}
+          >
+            <Text>
               <Ionicons
                 name="md-person-add"
-                size={15}
+                size={20}
                 color="white"
               />
-            }
-            onPress= {() => alert('Coming Soon')}
-            title="Add Friends"
-          />
+            </Text>
+            <Text style={styles.buttonText}>
+              Add Friends </Text>
+          </TouchableOpacity>
         </View>
         <View style={styles.footer}></View>
       </View>
@@ -67,18 +73,23 @@ const styles = StyleSheet.create({
   photoContainer: {
     flex: 4,
     alignItems: 'center',
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.8,
+    shadowRadius: 8,
     justifyContent: 'space-around',
   },
   img: {
-    width: 175,
-    height: 175,
-    borderRadius: 175 / 2,
+    width: 160,
+    height: 160,
+    borderRadius: 160 / 2,
     overflow: "hidden",
     borderWidth: 3,
     borderColor: "white"
   },
   textStyle: {
     fontSize: 28,
+    fontFamily: 'Helvetica-Bold',
     color: 'white',
   },
   body: {
@@ -86,6 +97,24 @@ const styles = StyleSheet.create({
     padding: 20,
     paddingHorizontal: 20,
     justifyContent: "space-around",
+  },
+  button: {
+    alignItems: 'flex-start',
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.8,
+    shadowRadius: 2,
+    backgroundColor: '#34465d',
+    padding: 12,
+    flexDirection: "row",
+    borderRadius: 10,
+  },
+
+  buttonText: {
+    color: 'white',
+    fontFamily: 'Helvetica-Bold',
+    paddingHorizontal: 20,
+    justifyContent: "center",
   },
   footer: {
     flex: 4,
