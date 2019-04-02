@@ -5,9 +5,7 @@ import { Ionicons } from '@expo/vector-icons';
 var myImage = require('./assets/pug.jpg');
 
 export default class App extends React.Component {
-  doNothing = () => {
 
-  }
   render() {
     return (
       <View style={styles.container}>
