@@ -14,7 +14,7 @@ export default class App extends React.Component {
       <View style={styles.container}>
         <View style={styles.header}>
           <Ionicons name="md-close" size={32} color="white" />
-          <Ionicons name="md-cog" size={32} color="white" />
+          <Ionicons name="md-settings" size={32} color="white" />
         </View>
         <View style={styles.photoContainer}>
           <Image source={myImage} style={styles.img} />
@@ -60,7 +60,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     flexDirection: "column",
-    backgroundColor: "#263238"
+    backgroundColor: "#1B1E27"
   },
   header: {
     flex: 1,
@@ -104,12 +104,11 @@ const styles = StyleSheet.create({
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.8,
     shadowRadius: 2,
-    backgroundColor: '#34465d',
+    backgroundColor: '#494C55',
     padding: 12,
     flexDirection: "row",
     borderRadius: 10,
   },
-
   buttonText: {
     color: 'white',
     fontFamily: 'Helvetica-Bold',
