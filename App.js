@@ -1,6 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, Image, View, Alert, TouchableOpacity, ScrollView } from 'react-native';
-import { Button } from 'react-native-elements';
+import { StyleSheet, Text, Image, View, TouchableOpacity } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 
 var myImage = require('./assets/pug.jpg');
